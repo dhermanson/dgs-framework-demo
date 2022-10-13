@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.14.RELEASE"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
+  id("com.netflix.dgs.codegen") version "5.4.0"
 }
 
 group = "com.example"
@@ -16,6 +17,9 @@ repositories {
 }
 
 dependencies {
+  implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:5.3.0"))
+  // implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
+  implementation("com.netflix.graphql.dgs:graphql-dgs-webflux-starter")
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
