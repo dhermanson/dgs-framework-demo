@@ -2,6 +2,9 @@ query MyShowQuery {
   orangeIsTheNewBlack: shows(titleFilter: "Orange") {
     ...ShowDetails
   }
+  ozark: shows(titleFilter: "Ozark") {
+    ...ShowDetails
+  }
   strangerThings: shows(titleFilter: "Stranger") {
     ...ShowDetails
   }
