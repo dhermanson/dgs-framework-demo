@@ -1,8 +1,14 @@
 type Query {
     shows(titleFilter: String): [Show!]!
+    theaters : [Theater!]!
 }
 
 type Show {
     title: String!
     releaseYear: Int!
+}
+
+type Theater {
+    name: String!
+    shows(filter: String) : [Show!]!
 }

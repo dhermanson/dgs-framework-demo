@@ -1,0 +1,10 @@
+query GetTheaters {
+  theaters {
+    name
+    shows(filter: "blah") {
+      
+      title
+      releaseYear
+    }
+  }
+}
