@@ -1,0 +1,16 @@
+query MyShowQuery {
+  orangeIsTheNewBlack: shows(titleFilter: "Orange") {
+    ...ShowDetails
+  }
+  strangerThings: shows(titleFilter: "Stranger") {
+    ...ShowDetails
+  }
+  allTheShows: shows {
+    ...ShowDetails
+  }
+}
+
+fragment ShowDetails on Show {
+  title
+  releaseYear
+}
